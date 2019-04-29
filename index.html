@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+    <script src="index.js"></script>
+    <script defer src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+</head>
+
+<body>
+
+    <div id="main">
+
+
+        <header id="header" class="nav">
+            <div id="logo">
+                <!-- brand won't always be an image, can be img+text -->
+                <img id="brand-logo" src="original_trombones.png" alt="">
+            </div>
+
+
+
+            <!-- <button id="mobile-menu"></button> -->
+            <div id="navbar">
+                <ul id="links" class="px-0">
+                    <li>Features</li>
+                    <li>How it works</li>
+                    <li>Pricing</li>
+                </ul>
+            </div>
+
+
+        </header>
+
+        <div id="hero-cta">
+            <h1 class="text-center">Subscribe here to get the weekly digest!</h1>
+            <img src="someMangaPublicationLikeJump.jpg" alt="">
+            <!-- <form class="text-center form-vertical" action=""> -->
+            <form class="text-center" action="">
+                <input id="email-cta" type="text" placeholder="Your email address">
+                <!-- <hr> -->
+                <button type="submit">Get yours!</button>
+            </form>
+        </div>
+        <hr>
+
+
+        <div id="container" class="container">
+
+            <div id="features">
+                <h3 class="text-center">Why choose us?</h3>
+                <ul class="px-0 grid">
+
+                    <li class="row">
+                        <div class="icon">
+                            <span class="fa fa-3x fa-briefcase icon-md"></span>
+                        </div>
+                        <div class="card">
+                            <h2>Personalized service</h2>
+                            <p>"Neque rro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                                velit..."
+                            </p>
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="icon">
+                            <span class="fa fa-3x fa-tasks icon-md"></span>
+                        </div>
+                        <div class="card">
+                            <h2>Industry knowledge</h2>
+                            <p>"Neque rro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                                velit..."
+                            </p>
+
+                        </div>
+                    </li>
+                    <li class="row">
+                        <div class="icon">
+                            <span class="fa fa-3x fa-user icon-md"></span>
+                        </div>
+
+                        <div class="card">
+                            <h2>Flexible plans</h2>
+                            <p>"Neque rro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                                velit..."
+                            </p>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div id="video" class="youtube-responsive-container text-center">
+                <!-- <iframe id="video" height="260"
+                    src="https://www.youtube-nocookie.com/embed/R_uS0aT0bG8?rel=0&amp;controls=1&amp;showinfo=0"
+                    frameborder="0" allowfullscreen=""></iframe> -->
+                <iframe src="https://www.youtube.com/embed/TybMLorMG2A" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <div id="plans">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
+
+
+            <hr>
+            <footer id="footer" class="footer text-center padded-y font-x3">
+                <em>&copy; Effirmaevei - Manuel Ferreira</em>
+
+            </footer>
+            <hr>
+        </div>
+        <!-- End of container -->
+
+
+    </div>
+    <!-- End of main -->
+
+</body>
+
+
+
+<!-- 
+navbar -> flexbox, pos absolute, height=30px, 4slots
+
+hero cta -> flexbox, messing with fill 0
+
+features -> ul flexbox direction column justify-items left
+
+video -> div
+
+pricing cards -> flexbox, 3 el
+
+for child elements of flex, use flex-grow and basis or flex: 1 1 initialWidthpx
+
+footer
+
+body -> min height -> 100vh; -->
