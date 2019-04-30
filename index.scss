@@ -141,7 +141,7 @@ header#header.nav {
 
     #logo {
         width: 100%;
-        margin-top: 15px;
+        margin-top: 20px;
         position: relative; //
 
         @include desktop {
@@ -150,9 +150,14 @@ header#header.nav {
         }
 
         h3 {
-            letter-spacing: 2px;
-            margin-left: 4rem;
-            text-align: left;
+            margin: 0;
+
+            @include desktop {
+                margin-left: 4rem;
+                letter-spacing: 2px;
+
+                text-align: left;
+            }
         }
 
     }
