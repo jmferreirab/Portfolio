@@ -142,7 +142,7 @@ header#header.nav #navbar {
   }
 }
 
-header#header.nav ul#links {
+header#header.nav ul#nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,7 +159,7 @@ header#header.nav ul#links {
 }
 
 @media (min-width: 768px) {
-  header#header.nav ul#links {
+  header#header.nav ul#nav-links {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
