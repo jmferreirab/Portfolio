@@ -48,6 +48,7 @@ html {
 }
 
 body {
+
     position: relative;
     // font-family: Geneva, Verdana, sans-serif;
     font-family: Muli, sans-serif;
@@ -58,7 +59,6 @@ body {
     //these two things are important for mobile margin
     margin: 0 0.5rem;
     // width: 100%;
-
 }
 
 
@@ -445,24 +445,24 @@ header#header.nav {
 .footer {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    // width: 100vw;
+    margin: 0 -.5rem;
+
     background: rgb(214, 214, 214);
     text-align: right;
 
-    margin-top: 1rem;
+    padding: 1rem 1rem;
 
 
-    .footer-wrap {
-        // width: 33%;
-
+    @include desktop {
+        margin: 1rem 1rem 0 1rem;
     }
+
 
     .footer-links {
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         margin: 0;
-
-        // width: 25%;
 
         .nav-link {
             padding: 0px .5rem;
@@ -470,22 +470,24 @@ header#header.nav {
             list-style: none;
         }
 
+        @include desktop {
+            justify-content: flex-end;
+        }
     }
 
     .copyright {
-        // width: 25%;
 
         display: flex;
         margin-top: 10px;
         padding: 0px .5rem;
-        justify-content: flex-end;
         font-style: normal;
+        justify-content: center;
 
-        // em {
-        //     width: 100%;
-        //     text-align: center;
+        @include desktop {
+            justify-content: flex-end;
+        }
 
-        // }
+
     }
 }
 
