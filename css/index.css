@@ -79,7 +79,7 @@ header#header.nav {
   background: #006630;
   background: #fff;
   width: 100%;
-  z-index: 10;
+  z-index: 1000;
 }
 
 @media (min-width: 768px) {
@@ -101,6 +101,12 @@ header#header.nav #logo {
     width: 60vw;
     margin: 0px;
   }
+}
+
+header#header.nav #logo h3 {
+  letter-spacing: 2px;
+  margin-left: 4rem;
+  text-align: left;
 }
 
 header#header.nav img#brand-logo {
@@ -158,6 +164,7 @@ header#header.nav ul#nav-links {
           align-items: center;
   list-style: none;
   padding: 0;
+  font-weight: bold;
 }
 
 @media (min-width: 768px) {
@@ -311,7 +318,7 @@ header#header.nav li {
   padding-bottom: .5rem;
 }
 
-#pricing {
+#demos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -329,7 +336,7 @@ header#header.nav li {
 }
 
 @media (min-width: 768px) {
-  #pricing {
+  #demos {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -337,19 +344,21 @@ header#header.nav li {
   }
 }
 
-#pricing .card-v {
+#demos .card-v {
   width: 100%;
   max-width: 300px;
   margin: 0 auto 1rem auto;
   border: 1px solid black;
   padding-bottom: 1.5rem;
   border-radius: 3px;
-  background-color: white;
+  background-color: #4b4b4b;
   z-index: 10;
+  -webkit-box-shadow: 0px 2px 3px 0px black;
+          box-shadow: 0px 2px 3px 0px black;
 }
 
 @media (min-width: 768px) {
-  #pricing .card-v {
+  #demos .card-v {
     width: auto;
     -webkit-box-flex: 0;
         -ms-flex: 0 1 auto;
@@ -359,15 +368,25 @@ header#header.nav li {
   }
 }
 
-#pricing .card-v h3 {
+#demos .card-v h3 {
   background-color: #d6d6d6;
   padding: 1rem 0px;
   margin: 0;
   z-index: -1;
   border-radius: 3px;
+  -webkit-box-shadow: 0px 2px 3px 0px black;
+          box-shadow: 0px 2px 3px 0px black;
 }
 
-#pricing .card-v button {
+#demos .card-v .bg-demo-img {
+  margin: 1rem;
+}
+
+#demos .card-v .bg-demo-img img {
+  width: 100%;
+}
+
+#demos .card-v button {
   background: #f0c30e;
   border: 1px solid #f0c30e;
   border-radius: 2px;
@@ -379,14 +398,13 @@ header#header.nav li {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 35%;
           flex: 1 1 35%;
+  -webkit-box-shadow: 0px 2px 3px 0px black;
+          box-shadow: 0px 2px 3px 0px black;
 }
 
-#pricing ul.details {
-  list-style: none;
-}
-
-#pricing li {
-  padding: 0.3rem;
+#demos .card-v button a {
+  text-decoration: none;
+  color: black;
 }
 
 .video-wrap {
