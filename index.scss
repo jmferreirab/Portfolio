@@ -169,13 +169,16 @@ header#header.nav {
 
     #navbar {
         //This allows us to fool flexlayout into having the ul with width 100%
-        width: 100%;
         display: flex;
-        justify-content: center;
-        //font-weight: 600;
         font-size: 1.05rem;
+        justify-content: center;
+        width: 100%;
 
-        @include desktop() {
+
+        //font-weight: 600;
+
+
+        @include desktop {
             display: block;
             width: auto; //important or it will try to take 100% of navbar
             // justify-content: flex-end;
@@ -333,31 +336,35 @@ header#header.nav {
     padding-bottom: .5rem;
 }
 
-#video {
 
-    .youtube-responsive-container {
-        position: relative;
-        padding-bottom: 56.25%;
-        padding-top: 30px;
-        // height: 56.25%;
-        // max-height: 315px;
-        height: 0;
-        overflow: hidden;
-        // margin: auto;
-    }
 
-    .youtube-responsive-container iframe,
-    .youtube-responsive-container object,
-    .youtube-responsive-container embed {
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+
+    height: 0;
+    overflow: hidden;
+
+    /*
+    // height: 56.25%;
+    // max-height: 315px;
+    // margin: auto;
+    */
+    iframe,
+    object,
+    embed {
         position: absolute;
         top: 0;
         left: 0;
-        width: 100;
+        width: 100%;
         height: 100%;
-        // max-width: 560px;
-        // max-height: 315px;
+        /* max-width: 560px;
+         max-height: 315px;
+        */
     }
-
 
     @include desktop {
 
@@ -372,9 +379,9 @@ header#header.nav {
             width: 10px;
         }
     }
-
-
 }
+
+
 
 @each $size in 'x1',
 'x2',

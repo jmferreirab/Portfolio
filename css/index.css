@@ -124,14 +124,14 @@ header#header.nav img#brand-logo {
 }
 
 header#header.nav #navbar {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 1.05rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.05rem;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -302,31 +302,39 @@ header#header.nav li {
   padding-bottom: .5rem;
 }
 
-#video .youtube-responsive-container {
+.video-container {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 30px;
   height: 0;
   overflow: hidden;
+  /*
+    // height: 56.25%;
+    // max-height: 315px;
+    // margin: auto;
+    */
 }
 
-#video .youtube-responsive-container iframe,
-#video .youtube-responsive-container object,
-#video .youtube-responsive-container embed {
+.video-container iframe,
+.video-container object,
+.video-container embed {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100;
+  width: 100%;
   height: 100%;
+  /* max-width: 560px;
+         max-height: 315px;
+        */
 }
 
 @media (min-width: 768px) {
-  #video .youtube-responsive-container {
+  .video-container .youtube-responsive-container {
     width: 10px;
   }
-  #video .youtube-responsive-container iframe,
-  #video .youtube-responsive-container object,
-  #video .youtube-responsive-container embed {
+  .video-container .youtube-responsive-container iframe,
+  .video-container .youtube-responsive-container object,
+  .video-container .youtube-responsive-container embed {
     position: relative !important;
     width: 10px;
   }
