@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
 $desktop: 992px;
 $desktop50: 992*2px;
 $medium: 768px;
+
+$primary-color: #00662f;
+$secondary-color: rgb(240, 195, 14);
+$third-color: #00FF77;
+$bg-color: #fff;
 
 @mixin desktop {
     @media (min-width: $medium) {
@@ -42,9 +49,11 @@ html {
 
 body {
     position: relative;
+    // font-family: Geneva, Verdana, sans-serif;
+    font-family: Muli, sans-serif;
 
     height: 100%;
-    background: ghostwhite;
+    background: $bg-color;
 
     //these two things are important for mobile margin
     margin: 0 0.5rem;
@@ -116,7 +125,7 @@ header#header.nav {
     top: 0;
     left: 0;
     background: hsl(148, 100%, 20%);
-    background: ghostwhite;
+    background: $bg-color;
     width: 100%;
     z-index: 10;
 
@@ -213,8 +222,7 @@ header#header.nav {
 
     li {
         flex: 1 0 auto;
-        // flex: 55%;
-        font-family: Geneva, Verdana, sans-serif;
+        // flex: 55%;        
         // font-size: 1.25rem;
         // align-self: stretch;
         // height: 100%;
@@ -262,12 +270,9 @@ header#header.nav {
 
     }
 
-    $btn-color: hsl(148, 100%, 20%);
-    $btn-color2: hsl(148, 100%, 20%);
-
     button {
-        background: $btn-color;
-        border: 1px solid $btn-color;
+        background: $primary-color;
+        border: 1px solid $primary-color;
         color: white;
         border-radius: 2px;
         padding: 0.5rem 1rem;
@@ -311,8 +316,12 @@ header#header.nav {
 
 
     .icon {
+        display: flex;
+        justify-content: center;
         padding-left: 1rem;
         padding-right: 0.5rem;
+        // color: #008148;
+        color: $primary-color;
 
         //Allow shrinking and do not take more than the given width
         //Equivalent to:
@@ -339,6 +348,84 @@ header#header.nav {
 
 
 
+
+#pricing {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    // justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+    // flex-wrap: wrap;
+    margin: 1rem auto;
+    flex-direction: column;
+
+
+    @include desktop {
+        // flex-wrap: nowrap;
+        flex-direction: row;
+
+    }
+
+    .card-v {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto 1rem auto;
+        border: 1px solid black;
+        padding-bottom: 1.5rem;
+        border-radius: 3px;
+        background-color: white;
+        z-index: 10;
+
+
+
+        @include desktop {
+            width: auto;
+            flex: 0 1 auto;
+            width: (100%/3);
+            margin: 1rem;
+        }
+
+        h3 {
+            background-color: rgb(214, 214, 214);
+            padding: 1rem 0px;
+            margin: 0;
+            z-index: -1;
+            border-radius: 3px;
+        }
+
+
+        button {
+            background: $secondary-color;
+            border: 1px solid $secondary-color;
+            // color: ;
+            border-radius: 2px;
+            padding: 0.5rem 1rem;
+            font-size: 1.15rem;
+            align-self: center;
+            flex: 1 1 35%;
+            // width: 30%;
+            // margin-top: 1rem;
+            // @include nox
+        }
+
+
+    }
+
+
+
+    ul.details {
+        list-style: none;
+    }
+
+    li {
+        padding: 0.3rem;
+    }
+
+
+
+
+}
 
 
 .video-wrap {
