@@ -28,7 +28,8 @@ body {
   position: relative;
   font-family: Muli, sans-serif;
   height: 100%;
-  background: #fff;
+  background: #2f2f2f;
+  color: #cacaca;
   margin: 0 0.5rem;
 }
 
@@ -48,10 +49,72 @@ body {
   padding-top: 150px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #main {
     padding-top: 75px;
   }
+}
+
+em {
+  display: block;
+  font-size: 1rem;
+  padding: 0;
+  font-weight: bold;
+  color: #cacaca;
+  text-align: center;
+  background: #4d4d4d;
+  margin: 1rem -.5rem 0 -.5rem;
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.tech-ribbon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 3rem;
+  background: #4d4d4d;
+  margin: 0 -0.5rem 0.5rem -.5rem;
+  padding: 0.5rem .5rem 1rem 0.5rem;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .tech-ribbon {
+    height: 100px;
+  }
+}
+
+.tech-ribbon i.devicon {
+  padding: 0.4rem 0.8rem;
+  color: #999;
+  z-index: 15;
+  position: relative;
+}
+
+.tech-ribbon i.devicon:before {
+  z-index: 115;
+}
+
+.tech-ribbon::before {
+  background: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  top: 0px;
+  left: 0px;
 }
 
 .container {
@@ -77,12 +140,12 @@ header#header.nav {
   top: 0;
   left: 0;
   background: #006630;
-  background: #fff;
+  background: #2f2f2f;
   width: 100%;
   z-index: 1000;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header#header.nav {
     height: 75px;
     -ms-flex-wrap: nowrap;
@@ -96,7 +159,7 @@ header#header.nav #logo {
   position: relative;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header#header.nav #logo {
     width: 60vw;
     margin: 0px;
@@ -107,7 +170,7 @@ header#header.nav #logo h3 {
   margin: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header#header.nav #logo h3 {
     margin-left: 4rem;
     letter-spacing: 2px;
@@ -132,7 +195,7 @@ header#header.nav img#brand-logo {
   max-width: 300px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header#header.nav img#brand-logo {
     margin: 0 0 0 20px;
   }
@@ -149,7 +212,7 @@ header#header.nav #navbar {
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header#header.nav #navbar {
     display: block;
     width: auto;
@@ -173,7 +236,7 @@ header#header.nav ul#nav-links {
   font-weight: bold;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header#header.nav ul#nav-links {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -241,8 +304,8 @@ header#header.nav li {
 }
 
 #hero-cta button {
-  background: #00662f;
-  border: 1px solid #00662f;
+  background: #87b5d3;
+  border: 1px solid #87b5d3;
   color: white;
   border-radius: 2px;
   padding: 0.5rem 1rem;
@@ -306,7 +369,7 @@ header#header.nav li {
           justify-content: center;
   padding-left: 1rem;
   padding-right: 0.5rem;
-  color: #00662f;
+  color: #87b5d3;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 20%;
           flex: 0 1 20%;
@@ -339,9 +402,10 @@ header#header.nav li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: black;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #demos {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -357,13 +421,13 @@ header#header.nav li {
   border: 1px solid black;
   padding-bottom: 1.5rem;
   border-radius: 3px;
-  background-color: #4b4b4b;
+  background-color: #2f2f2f;
   z-index: 10;
   -webkit-box-shadow: 0px 2px 3px 0px black;
           box-shadow: 0px 2px 3px 0px black;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   #demos .card-v {
     width: auto;
     -webkit-box-flex: 0;
@@ -431,13 +495,12 @@ header#header.nav li {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 -.5rem;
-  background: #d6d6d6;
+  background: #4d4d4d;
   text-align: right;
   padding: 1rem 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .footer {
     margin: 1rem 1rem 0 1rem;
   }
@@ -458,7 +521,7 @@ header#header.nav li {
   list-style: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .footer .footer-links {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -478,7 +541,7 @@ header#header.nav li {
           justify-content: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .footer .copyright {
     -webkit-box-pack: end;
         -ms-flex-pack: end;

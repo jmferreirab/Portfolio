@@ -4,13 +4,28 @@ $desktop: 992px;
 $desktop50: 992*2px;
 $medium: 768px;
 
-$primary-color: #00662f;
+// $primary-color: #00662f;
+// $primary-color: #dc3545;
+// $primary-color: #9b454d;
+$primary-color: #87b5d3;
+// $primary-color: #007bff;
+// $primary-color: #17a2b8;
+// $primary-color: #8ad3df;
+$btn-font-color: white;
 $secondary-color: rgb(240, 195, 14);
 $third-color: #00FF77;
+
+
 $bg-color: #fff;
+$bg-color: #2f2f2f;
+
+$secondary-bg: #4d4d4d;
+
+$text-color: #cacaca;
+$secondary-text-color: #999;
 
 @mixin desktop {
-    @media (min-width: $medium) {
+    @media (min-width: $desktop) {
         @content;
     }
 }
@@ -55,6 +70,7 @@ body {
 
     height: 100%;
     background: $bg-color;
+    color: $text-color;
 
     //these two things are important for mobile margin
     margin: 0 0.5rem;
@@ -90,6 +106,71 @@ $navbar-mobile: 150px;
         padding-top: $navbar-height;
 
     }
+}
+
+em {
+    display: block;
+    font-size: 1rem;
+    // margin: 0.3rem 0;
+    padding: 0;
+    font-weight: bold;
+    color: $text-color;
+    text-align: center;
+    // width: 100%;
+    background: $secondary-bg;
+    margin: 1rem -.5rem 0 -.5rem;
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+
+
+}
+
+.tech-ribbon {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 3rem;
+    background: $secondary-bg;
+    margin: 0 -0.5rem 0.5rem -.5rem;
+    padding: 0.5rem .5rem 1rem 0.5rem;
+    position: relative;
+    //max-height: 300px;
+
+    @include desktop {
+        height: 100px;
+    }
+
+
+    i.devicon {
+        padding: 0.4rem 0.8rem;
+        color: $secondary-text-color;
+
+        z-index: 15;
+        position: relative;
+
+    }
+
+    i.devicon:before {
+        z-index: 115;
+    }
+
+
+
+
+}
+
+
+.tech-ribbon::before {
+    background: rgba(255, 255, 255, 0.3);
+    // content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    top: 0px;
+    left: 0px;
 }
 
 .container {
@@ -284,7 +365,7 @@ header#header.nav {
     button {
         background: $primary-color;
         border: 1px solid $primary-color;
-        color: white;
+        color: $btn-font-color;
         border-radius: 2px;
         padding: 0.5rem 1rem;
         font-size: 1rem;
@@ -370,6 +451,7 @@ header#header.nav {
     // flex-wrap: wrap;
     margin: 1rem auto;
     flex-direction: column;
+    color: black;
 
     @include desktop {
         // flex-wrap: nowrap;
@@ -384,7 +466,7 @@ header#header.nav {
         border: 1px solid black;
         padding-bottom: 1.5rem;
         border-radius: 3px;
-        background-color: rgb(75, 75, 75);
+        background-color: $bg-color;
         z-index: 10;
         box-shadow: 0px 2px 3px 0px black;
 
@@ -465,9 +547,9 @@ header#header.nav {
     display: flex;
     flex-direction: column;
     // width: 100vw;
-    margin: 0 -.5rem;
+    // margin: 0 -.5rem;
 
-    background: rgb(214, 214, 214);
+    background: $secondary-bg;
     text-align: right;
 
     padding: 1rem 1rem;
