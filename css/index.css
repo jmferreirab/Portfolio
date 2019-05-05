@@ -439,7 +439,7 @@ header#header.nav li {
 }
 
 #demos .card-v h3 {
-  background-color: #d6d6d6;
+  background-color: #999;
   padding: 1rem 0px;
   margin: 0;
   z-index: -1;
@@ -457,8 +457,8 @@ header#header.nav li {
 }
 
 #demos .card-v button {
-  background: #f0c30e;
-  border: 1px solid #f0c30e;
+  background: #cacaca;
+  border: 1px solid #999;
   border-radius: 2px;
   padding: 0.5rem 1rem;
   font-size: 1.15rem;
@@ -502,7 +502,7 @@ header#header.nav li {
 
 @media (min-width: 992px) {
   .footer {
-    margin: 1rem 1rem 0 1rem;
+    margin: 1rem -.5rem 0 -.5rem;
   }
 }
 

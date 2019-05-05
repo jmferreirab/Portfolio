@@ -478,7 +478,7 @@ header#header.nav {
         }
 
         h3 {
-            background-color: rgb(214, 214, 214);
+            background-color: $secondary-text-color;
             padding: 1rem 0px;
             margin: 0;
             z-index: -1;
@@ -498,8 +498,8 @@ header#header.nav {
         }
 
         button {
-            background: $secondary-color;
-            border: 1px solid $secondary-color;
+            background: $text-color;
+            border: 1px solid $secondary-text-color;
             // color: ;
             border-radius: 2px;
             padding: 0.5rem 1rem;
@@ -556,7 +556,7 @@ header#header.nav {
 
 
     @include desktop {
-        margin: 1rem 1rem 0 1rem;
+        margin: 1rem -.5rem 0 -.5rem;
     }
 
 
